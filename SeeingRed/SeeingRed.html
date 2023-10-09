@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<link href="css/if.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+	
+<h1>Some Memorable Movies</h1>
+<h3><span class="ital">Seeing Red </span>(Cassie Sievwright, 2023)</h3>
+	
+	
+<div class="sideByside">
+	<img class="filmStill" onClick="onClick_DTRT_img01()" src="images/Screenshot 2023-10-02 183345.png" alt="Seeing Red Dinner">
+	<img class="filmStill" onClick="onClick_DTRT_img02()" src="images/Screenshot 2023-10-02 183409.png" alt="Seeing Red Phone">
+	<img class="filmStill" onClick="onClick_DTRT_img03()" src="images/Screenshot 2023-10-02 183546.png" alt="Seeing Red Mask">
+	</div>
+	
+<p class="filmInfo"  id="DTRT_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis, eligendi excepturi facere odit provident repellat mollitia voluptatibus veniam deleniti repudiandae, sit doloremque. Ipsa repellat labore, ex dolore aut facilis, numquam error natus enim qui, quaerat facere porro eos architecto ipsum nihil assumenda id voluptates harum itaque reprehenderit delectus similique dolor.</p>
+	
+<button type="button" onClick="gotoMovie()" id="gotoMovie_btn">Go to the movie</button>	
+	
+</body>
+<script>	
+	
+var gotoMovie_btn = document.getElementById("gotoMovie_btn");
+gotoMovie_btn.style.visibility = "hidden";
+
+	
+var img01_clicked = false;
+var img02_clicked = false;
+var img03_clicked = false;
+	
+var DTRT_text = document.getElementById("DTRT_text");	
+	
+var DTRT00 = "Seeing Red follows a girl falling in love with an entity wearing a red mask. When her friend tells her that it has betrayed her, she stabs it to death. It is only when she takes off the mask that she realizes it is herself. She then puts on the mask and goes upstairs to await another version of herself waking up.";	
+	
+
+var DTRT01 = "The basis of this film was a photograph of two nicely dressed women sitting at a table. In the picture it can be seen that one of them is in deep thought or contemplation. Throughout this film I really wanted to expand the reasoning behind this woman's apparent distress. At first I was going to go with a straightforward plot and dialogue. It was only as I kept writing that the story started to turn more metaphorical.";
+	
+var DTRT02 = "This film is a metaphor for the idea of not being able to forgive and love yourself. The red entity is a visual representation of the mental image that we all have of ourselves. When the red entity betrays her it symbolizes not being able to live up to what you want be. And instead of forgiving her own misgivings, she instead attacks herself. Because she is not able to learn and grow from the mistake, she will continue the cycle of hurting herself over and over again.";
+
+
+var DTRT03 = "Throughout the film, there was a large amount of color grading required to acheive its look. In the film, whenever the red entity is on screen, the only color that the audience can see is the red of its mask. This was supposed to symbolize the self obsession that the main character has with herself.";
+
+DTRT_text.innerHTML = DTRT00;
+	
+function onClick_DTRT_img01(){
+	DTRT_text.innerHTML = DTRT01;
+	img01_clicked = true;
+	console.log("img01_clicked = " + img01_clicked);
+	revealButton();
+}	
+	
+function onClick_DTRT_img02(){
+	DTRT_text.innerHTML = DTRT02;
+	img02_clicked = true;
+	console.log("img02_clicked = " + img02_clicked);
+	revealButton();
+}
+	
+function onClick_DTRT_img03(){
+	DTRT_text.innerHTML = DTRT03;
+	img03_clicked = true;
+	console.log("img03_clicked = " + img03_clicked);
+	revealButton();
+}
+	
+function revealButton(){
+	if (img01_clicked && img02_clicked && img03_clicked){
+		console.log("REVEAL BUTTON");
+		gotoMovie_btn.style.visibility = "visible"
+	}
+}	
+	
+function gotoMovie(){
+	window.open("https://www.youtube.com/watch?v=PpRTN64_K5A", "_blank");
+}	
+	</script>
+</html>
