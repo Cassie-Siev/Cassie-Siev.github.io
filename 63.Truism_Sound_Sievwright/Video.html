@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<link href="css/Video.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<div>
+  <video id="displayed_vid" preload="auto" muted="muted" autoplay="autoplay" loop="loop" >
+    <source src="video/Truism_Project.mp4" type="video/mp4">
+  </video>
+	</div>	
+	
+<div class="centered_text">
+<h1 id="truism" onmouseover="onTruismText()" onmouseout="outTruismText()" onClick="changeVideo()">ALL THINGS ARE DELICATELY INTERCONNECTED</h1>
+	</div>
+	
+<script>
+	
+var channel = 1;	
+var pausedAt = 0;
+	
+// references to the videos
+	
+var displayed_vid = document.getElementById("displayed_vid");
+	
+// stuff for sound
+	
+var mySound = new Audio("sound/Jazz.mp3");
+	
+// references to the videos
+	
+var Truism_Project = "video/Truism_Project.mp4";
+var Dress = "video/Dress.mp4"; 
+	
+function onTruismText(){
+	document.getElementById("displayed_vid").style.filter = "blur(10px)";
+}	
+	
+function outTruismText(){
+	document.getElementById("displayed_vid").style.filter = "blur(0px)";
+}
+	
+function changeVideo(){
+	console.log("will change vid");
+	pausedAt = displayed_vid.currentTime;
+	if (channel == 0){
+		displayed_vid.src = Truism_Project;
+		displayed_vid.currentTime = pausedAt;
+		channel = 1;
+	}
+	else{
+		displayed_vid.src = Dress;
+		displayed_vid.currentTime = pausedAt;
+		channel = 0;
+	}
+	
+	mySound.play();
+}
+	
+</script>	
+	
+</body>
+</html>
