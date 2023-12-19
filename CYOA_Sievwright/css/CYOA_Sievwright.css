@@ -1,0 +1,33 @@
+@charset "utf-8";
+#CYOA_Vid {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+	top: 0;
+	left: 0;
+}
+.Second_Text {
+	  position: relative;
+    text-align: center;
+    text-shadow: 0px 0px #F5F1F1;
+    border-color: #F0EAEA;
+    font-size: 75px;
+    margin-top: 200px;
+	width: 50vw;
+    margin-left: 50vw;
+    top: px;
+    bottom: px;
+	color: #000903;
+}
+
+.First_Choice {
+    position: relative;
+    text-align: center;
+	text-shadow: 0px 0px #F5F1F1;
+    font-size: 75px;
+    top: 285px;
+    border-color: #F0EAEA;
+    margin-left: -50vw;
+    color: #000903;
+}

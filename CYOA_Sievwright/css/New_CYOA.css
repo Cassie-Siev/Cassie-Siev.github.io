@@ -1,0 +1,19 @@
+@charset "utf-8";
+#CYOA_Vid {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+	top: 0;
+	left: 0;
+}
+.First_Text {
+    position: relative;
+    text-align: center;
+    justify-content: center;
+    margin-top: 50vh;
+    text-shadow: 0px 0px #F5F1F1;
+    color: #000903;
+    border-color: #F0EAEA;
+    font-size: 75px;
+}
